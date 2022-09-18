@@ -1,0 +1,62 @@
+# Iteráveis
+
+nome = 'Ricardo'
+
+for x in nome:
+  print(x)
+  
+##################  
+R
+i
+c
+a
+r
+d
+o  
+################## 
+
+# Iteradores
+
+nome = 'Ricardo'
+iterador = iter(nome)  # Possui 7 espaços
+
+print(next(lista))  # R
+print(next(lista))  # i
+print(next(lista))  # c
+print(next(lista))  # a
+print(next(lista))  # r
+print(next(lista))  # d
+print(next(lista))  # o
+print(next(lista))  #  Vai dar erro porque todos os espaços ja foram consumidos
+
+##################  
+R
+i
+c
+a
+r
+d
+o  
+ERROR
+################## 
+
+# Geradores: Mesma coisa que iteradores, porém são feitos com função
+
+def sq_numbers(n): 
+    for i in range(1, n+1): 
+        yield i*i 
+  
+  
+a = sq_numbers(3) 
+  
+print("The square of numbers 1,2,3 are : ") 
+print(next(a)) 
+print(next(a)) 
+print(next(a)) 
+
+##################  
+The square of numbers 1,2,3 are :
+1
+4
+9
+################## 
